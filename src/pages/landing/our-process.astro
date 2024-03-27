@@ -1,0 +1,140 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import { headerData } from '~/data';
+
+const meta = {
+  title: "Our Process - This is how we do it",
+  description: "Fitting your goals, objectives, and experience are paramount to our successful partnership. We utilise a simple 5 step process to achieve this.",
+};
+---
+
+<Layout {meta}>
+ <!-- <Fragment slot="header">
+    <Header
+      {...headerData}
+      showRssFeed
+      showToggleTheme
+      position="left"
+    />
+  </Fragment>-->
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    callToAction={{ text: 'Download Our Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#services' }}
+    image={{ src: import('~/assets/images/hero2.png'), alt: 'get our free EOR guide' }}
+  >
+    <Fragment slot="title">
+     Consult ➫ Plan ➫ Execute ➫ Evaluate ➫ Adapt <!--<span class="hidden lg:inline">create your website <br />with</span>-->
+     <!-- <span class="text-accent dark:text-white highlight"> Astro 2.0</span>--> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <!--<span class="font-semibold">AstroWind</span>--> Fitting your goals, objectives, and experience are paramount to our successful partnership. We utilise a simple 5 step process to achieve this. Each stage is important to be performed thoroughly and have stakeholder agreement. Investing the appropriate time and following our proven predictable pattern of activity ensures success.</br></br>
+        We tailor our process to fit with your requirements
+ </span
+      >
+      <span class="block mb-1 sm:hidden">Fitting your goals, objectives, and experience are paramount to our successful partnership. We utilise a simple 5 step process to achieve this. Each stage is important to be performed thoroughly and have stakeholder agreement. Investing the appropriate time and following our proven predictable pattern of activity ensures success.</br></br>
+        We tailor our process to fit with your requirements</span>
+    </Fragment>
+
+     <!--  <Fragment slot="image">
+      <img src="/src/assets/images/hero2.png">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dsTXcSeAZq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%"></iframe>
+    </Fragment>-->
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+   
+    items={[
+      {
+        title: 'Consult',
+        description:
+          'Partnering and integrating you requires us to fully understand your business. Investing in getting to know each other ensures the right fit and supports us in ensuring our unique solutions are specifically designed with you to fit you. <br><br><u>Know your business</u>  <br><br>We have identified key areas that are critical to understanding our partners. Based on the service we provide these elements are crucial in ensuring long term success.  Investing the time and engagement of key stakeholders delivers results. We complete our discovery process through a questionnaire, online calls and potentially face to face meetings. We understand you are busy and so are we, so we want to be mindful that the time spent is appropriate and productive.',
+      },
+      {
+        title: 'Plan',
+        description:
+          'We have identified key areas that are critical to understanding our partners. Based on the service we provide these elements are crucial in ensuring long term success.  Investing the time and engagement of key stakeholders delivers results.',
+      },
+    //  {
+    //    title: 'Nulla omittam sadipscing mel ne',
+    //    description:
+    //      'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/consultings.png'),
+      alt: 'MGSDPro consultation in progress',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="services" style="margin-top:-12%"></h3>
+  
+    </Fragment>
+  </Content>
+  <div style="margin-top:-10%;">
+  <Content
+   isReversed
+    items={[
+      {
+        title: 'Execute',
+        description:
+          'Execution is more crucial than planning. With a robust plan in place, we will ensure resources are trained, processes are documented. Implementing quality assessments to deliver the plan. ',
+      },
+      {
+        title: 'Evaluate',
+        description:
+          'Trust is fundamental in any partnership. We know it takes time to build confidence in performance. It is important we are aligned and hitting the milestones agreed. Reviewing performance on a regular basis and evaluating what is working and where efforts are needed. Regular communication and feedback by stakeholders will support corrective action and adjustments to implement the improvements that build confidence and trust.',
+      },
+    {
+        title: 'Adapt',
+        description:
+          'Following evaluation and feedback we can make the minor adjustment required to keep the plan on course. Acting in a pre-emptive and timely manner to ensure seamless delivery.',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/do-more.jpg'),
+      alt: 'MGSDPro Process Steps ',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="services" style="margin-top:-40%"></h3>
+  
+    </Fragment>
+  </Content>
+  </div>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Get the Free Guide',
+      href: '/landing/free-guide',
+      icon: 'tabler:download',
+    }}
+  >
+    <Fragment slot="title">
+      Download Our Free Guide
+    </Fragment>
+
+    <Fragment slot="subtitle">
+     All you need to know about outsourcing labor resources from Bulgaria.
+    </Fragment>
+  </CallToAction>
+
+ <div class="cookie-banner">
+  <p>Our website uses cookies to improve your experience. By continuing to use our site, you accept our use of cookies.</p>
+  <button class="cookie-banner__button">Accept</button>
+</div>
+
+</Layout>

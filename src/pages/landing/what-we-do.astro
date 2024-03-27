@@ -1,0 +1,142 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import { headerData } from '~/data';
+
+const meta = {
+  title: "What We Do",
+  description: "We provide Employee of Record services and talent solutions, that make sense and flexible for your needs.", 
+};
+---
+
+<Layout {meta}>
+ <!-- <Fragment slot="header">
+    <Header
+      {...headerData}
+      showRssFeed
+      showToggleTheme
+      position="left"
+    />
+  </Fragment>-->
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    callToAction={{ text: 'Download Our Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#services' }}
+  >
+    <Fragment slot="title">
+      What we do <!--<span class="hidden lg:inline">create your website <br />with</span>-->
+     <!-- <span class="text-accent dark:text-white highlight"> Astro 2.0</span>--> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <!--<span class="font-semibold">AstroWind</span>--> 
+        Our services are designed to be flexible, meet your needs and drive exceptional results.
+
+
+         </span>
+        <span class="block mb-1 sm:hidden font-bold text-blue-600">Our services are designed to be flexible, meet your needs and drive exceptional results.</span>  
+      
+      
+    </Fragment>
+
+   <!-- <Fragment slot="image">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dsTXcSeAZq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%"></iframe>
+    </Fragment> -->
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    
+    items={[
+      {
+        title: 'Employee of Record (EOR)',
+        description:
+          'Solve talent solutions. We provide talent solutions that make sense and flexible for your needs. In a growing world of mobile talent, you no longer need to search just in your location for the right talent. From talent selection to providing Employee of Record Services we can support you in finding and managing your employees in global markets to ensure all local laws are adhered. Ensuring your compliance and safety as a business.',
+      },
+      
+    //  {
+    //    title: 'Nulla omittam sadipscing mel ne',
+    //    description:
+    //      'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/hero3.png'),
+      alt: 'Employee of Record waitng to get hired',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="services" style="margin-top:-15%">Our services</h3>
+      <p>Your team is an extension of your business without all the hassles that comes with building and maintaining these teams. We aim to partner with our clients and integrate with your business. This enables us to ensure we match the right skills and talent in line with your guiding principles. It is paramount that our unique solutions are specifically designed with you to fit your goals, objectives, and culture.</p>
+  
+    </Fragment>
+  </Content>
+  <div style="margin-top:-10%;">
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Outsourcing',
+        description:
+          'Realise your potential by utilising the best talent in the appropriate part of your business. We are experts in identifying the right talent, helping them grow, and retaining them.  Our experience helps avoid cultural challenges between in-house and outsourced teams. Whether its integrated team or a fully outsourced solution we will work with you for the right solution.',
+      },      
+      {
+        title: 'Marketing',
+        description:
+          'Revolutionise your business with marketing that converts. We design marketing solutions that helps companies grow. Our Marketing-as-a-Service solution is a tailored solution that delivers marketing services from strategy development right through to marketing planning and execution.',
+      },
+    //  {
+    //    title: 'New ideas and contributions',
+    //    description:
+    //      'We always strive to help with new ideas and contributions. We use our experties to help you find your own, so you can concentrate on what really matters - growing your business.',
+    //  },
+    //  {
+    //    title: 'Nulla omittam sadipscing mel ne',
+    //    description:
+    //      'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/evaluatings.png'),
+      alt: 'Our Employee of Record services at a glance',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="services" style="margin-top:-25%"></h3>
+  
+    </Fragment>
+  </Content>
+  </div>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Get the Free Guide',
+      href: '/landing/free-guide',
+      icon: 'tabler:download',
+    }}
+  >
+    <Fragment slot="title">
+     Download Our Free Guide
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Everything you need to know about outsourcing labor resources from Bulgaria.
+    </Fragment>
+  </CallToAction>
+
+ <div class="cookie-banner">
+  <p>Our website uses cookies to improve your experience. By continuing to use our site, you accept our use of cookies.</p>
+  <button class="cookie-banner__button">Accept</button>
+</div>
+
+</Layout>

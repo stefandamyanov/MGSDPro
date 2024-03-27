@@ -1,0 +1,565 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const meta = {
+  title: "Services",
+  description: "We provide EOR services and talent solutions that make sense and flexible for your needs.",
+};
+---
+
+<Layout {meta}>
+ <!-- <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[]}
+      actions={[
+        {
+          type: "ghost",
+          text: 'Login',
+          href: '#',
+        },
+        {
+          type: "primary",
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+    /> -->
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Get the Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#about_us' }}
+    image={{ src: import('~/assets/images/eor.png'), alt: 'MGSDPro EOR services' }}
+  >
+    
+    <Fragment slot="title">
+    
+      Our Services 
+   
+    </Fragment>
+
+    <Fragment slot="subtitle" id="eor_subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold" id="eor">Employer of Record (EOR) - Solve talent solutions
+        <p style="margin-bottom:6%;">We provide EOR services and talent solutions that make sense and flexible for your needs. In a growing world of mobile talent, you no longer need to search just in your location for the right talent. Our Employer of Record Services can support you finding and managing your employees in Bulgaria to ensure all local laws are adhered. Ensuring your compliance and safety as a business.</p>
+
+
+    </Fragment>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Allow you to hire full-time workers in Bulgaria legally',
+        description:
+          '',
+      },
+      {
+        title: 'Run Payroll, in full compliance with local legislations',
+        description:
+          '',
+      },
+      {
+        title: 'Tax obligations, including handling both employee and business taxes',
+        description:
+          '',
+      },
+      {
+        title: 'Handle benefits administration ',
+        description:
+          '',
+      },
+      {
+        title: 'Elements of HR, including working hours, vacation days and sick leaves ',
+        description:
+          '',
+      },
+      {
+        title: 'Drafting of locally compliant employment contracts and other required HR documentation ',
+        description:
+          '',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/hero2.png'),
+      alt: 'EOR Service in Progress',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-10%;">Solved by our EOR Services</h3>
+      
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+<div style="margin-top:-10%;">
+  <Content
+    items={[
+      {
+        title: 'No need to set up a local entity',
+        description:
+          '',
+      },
+      {
+        title: 'Onboard the best talent in Bulgaria in a compliant way',
+        description:
+          '',
+      },
+      {
+        title: 'Hire full-time employees risk-free',
+        description:
+          '',
+      },
+      {
+        title: 'No need to learn about local labour laws and payroll regulations',
+        description:
+          '',
+      },
+      {
+        title: 'Ability to test the local labour market',
+        description:
+          '',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/eor2.png'),
+      alt: 'Benefits of our EOR services ',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-20%;">Benefits of our EOR Service</h3>
+    </Fragment>
+  </Content>
+ </div> 
+<div style="margin-top:-10%;">
+<Content
+    isReversed
+    items={[
+      {
+        title: 'Working hours',
+        description:
+          '',
+      },
+      {
+        title: 'Compensation and bonuses',
+        description:
+          '',
+      },
+      {
+        title: 'Termination and severance',
+        description:
+          '',
+      },
+      {
+        title: 'Maternity and sick leave ',
+        description:
+          '',
+      },
+      {
+        title: 'Vacation and holidays',
+        description:
+          '',
+      },
+      {
+        title: 'Health coverage ',
+        description:
+          '',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/eor3.png'),
+      alt: 'EOR service solutions',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top: -5%">Guidance</h3>
+      <p>We provide you guidance on all the local contract, benefits, and paid leave requirements to help you stay in compliance and understand your total in-country social costs</p>
+    </Fragment>
+  </Content>
+</div>
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <!--<CallToAction
+    callToAction={{
+      text: 'Get template',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:download',
+    }}
+  >
+   <Fragment slot="title">
+      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction> -->
+
+
+
+
+    <div id="outsourcing-title">
+ <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Get the Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#outsourcing' }}
+    image={{ src: import('~/assets/images/outsourcing3.png'), alt: 'Outsourcing services' }}
+  >
+    
+    <Fragment slot="title">
+    
+     </br>Outsourcing 
+   
+    </Fragment>
+     
+ 
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Realise your potential by utilising the best talent in the appropriate part of your business </span>
+        <p style="margin-bottom:6%;" id="outsourcing">We have over 20 years of experience in outsourcing and managing outsourced teams from being the client as well as being the provider. We understand the challenges and rewards of partnering with an outsourced team.</p>
+
+        
+    </Fragment>
+  
+
+  </Hero2>
+    </div>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+   //   {
+   //     title: 'Allow you to hire full-time workers in Bulgaria legally',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Run Payroll, in full compliance with local legislations',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Tax obligations, including handling both employee and business taxes',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Handle benefits administration ',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Elements of HR, including working hours, vacation days and sick leaves ',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Drafting of locally compliant employment contracts and other required HR documentation ',
+   //     description:
+   //       '',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/outsourcing4.png'),
+      alt: 'Outsourcing solutions',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-5%">Remote talent, at location or hybrid</h3>
+       <p style="margin-bottom:6%;">Flexibility is at the heart of what employees want. At MGSD Pro we believe that as a flexible employer, you get the most out of your team. There are situations where a team working together in one location is optimal to deliver performance.</br></br>We offer a variety of solutions based on your requirement. These include building remote teams, at-location teams, or hybrid teams. </p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-0%">Scale Faster Work Smarter </h3>
+       <p style="margin-bottom:6%;">Getting results is what it’s all about. Delivering against skill, operational, or costs challenges is where we thrive. You are here because you need an answer. Let us help you solve these challenges. </p>
+ 
+
+      
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+<div style="margin-top:-10%;">
+  <Content
+    items={[
+      {
+        title: 'Account management',
+        description:
+          '',
+      },
+      {
+        title: 'Accounting',
+        description:
+          '',
+      },
+      {
+        title: 'Administration',
+        description:
+          '',
+      },
+      {
+        title: 'Customer support and service',
+        description:
+          '',
+      },
+      {
+        title: 'IT Developers',
+        description:
+          '',
+      },
+      {
+        title: 'Marketing',
+        description:
+          '',
+      },
+      {
+        title: 'Translation projects',
+        description:
+          '',
+      },
+
+    ]}
+    image={{
+      src: import('~/assets/images/outsourcing5.png'),
+      alt: 'Outsourcing support areas',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-30%;">Areas we can support:</h3>
+    </Fragment>
+  </Content>
+ </div> 
+
+
+
+<div id="marketing-title">
+ <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Get the Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#marketing' }}
+    image={{ src: import('~/assets/images/marketing2.png'), alt: 'Marketing services' }}
+  >
+    
+    <Fragment slot="title">
+    
+     </br>Marketing 
+   
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Revolutionise your business with marketing that converts </span>
+        <p style="margin-bottom:6%;">We design marketing solutions that help companies grow. Our Marketing-as-a-Service solution is a tailored solution that delivers marketing services from strategy development right through to marketing planning and execution.</p>
+        <p id="marketing"></p>
+
+        
+    </Fragment>
+  </Hero2>
+</div>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+   //   {
+   //     title: 'Allow you to hire full-time workers in Bulgaria legally',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Run Payroll, in full compliance with local legislations',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Tax obligations, including handling both employee and business taxes',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Handle benefits administration ',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Elements of HR, including working hours, vacation days and sick leaves ',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Drafting of locally compliant employment contracts and other required HR documentation ',
+   //     description:
+   //       '',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/marketing003.png'),
+      alt: 'Marketing solutions',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-5%">Online Strategy Development</h3>
+       </br><p style="margin-bottom:6%;">Following on from our Consult stage, we will build your short, medium, and long-term online marketing plan. </br></br>Focusing on your objectives to ensure you have a plan that can be executed and within a realistic budget. </br></br>
+We evaluate your target audience, ideal customer, and budgets and provide guidance on the right online channels and strategy to achieve your goals.</p>
+      
+
+      
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+<div style="margin-top:-0%;">
+  <Content
+    items={[
+      {
+        title: 'Annual Marketing Calendar',
+        description:
+          '',
+      },
+      {
+        title: 'Content',
+        description:
+          '',
+      },
+      {
+        title: 'Recommended exhibition attendance',
+        description:
+          '',
+      },
+      {
+        title: 'Webinars',
+        description:
+          '',
+      },
+      {
+        title: 'Email campaigns (Customers, Prospects)',
+        description:
+          '',
+      },
+      {
+        title: 'Advertising campaigns',
+        description:
+          '',
+      },
+      {
+        title: 'Company milestones',
+        description:
+          '',
+      },
+      {
+        title: 'Case studies',
+        description:
+          '',
+      },
+      {
+        title: 'Blogs, Newsletters, Whitepapers',
+        description:
+          '',
+      },
+      {
+        title: 'Customer focus group / round tables',
+        description:
+          '',
+      },
+      {
+        title: 'Awards internal/external',
+        description:
+          '',
+      },
+      {
+        title: 'Marketing budget plan',
+        description:
+          '',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/marketing4.png'),
+      alt: 'Marketing strategy development',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-30%;">Our delivered strategy can include plans for</h3>
+    </Fragment>
+  </Content>
+ </div> 
+
+ <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+   //   {
+   //     title: 'Allow you to hire full-time workers in Bulgaria legally',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Run Payroll, in full compliance with local legislations',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Tax obligations, including handling both employee and business taxes',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Handle benefits administration ',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Elements of HR, including working hours, vacation days and sick leaves ',
+   //     description:
+   //       '',
+   //   },
+   //   {
+   //     title: 'Drafting of locally compliant employment contracts and other required HR documentation ',
+   //     description:
+   //       '',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/marketing0001.png'),
+      alt: 'marketing service benefits',
+      style: 'margin-top:0%',
+    }}
+  >
+    <Fragment slot="content">
+       <div style="margin-top:-40%; margin-bottom:0%;">
+       <p style="margin-bottom:8%;">Once the strategy is delivered, we can continue to support your team to execute the plan, be an advisor or our team can execute the plan for you.</p>
+       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-6%;margin-bottom:6%;font-size:22px;">Marketing Management</h3>
+       <p style="margin-top:-3%;margin-bottom:8%;">Our tailored plans are flexible, and we can manage one part of your marketing plan/activity or can fully manage your full online presence. We will support your team in creating, planning, and implementing your strategies. Use our experience and expertise to mentor your team is delivering your business goals.</p>
+
+       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-6%;margin-bottom:6%;font-size:22px;">Marketing Execution</h3>
+       <p style="margin-top:-3%;margin-bottom:8%;">Utilise our marketing team to deliver your marketing. From providing an individual resource to execute specific parts of your plan or a whole team of people dedicated to you.</p>
+      
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-6%;margin-bottom:6%; font-size:22px;">Employer of Record Service (EOR)</h3>
+       <p style="margin-top:-4%;margin-bottom:0%;">Struggling with resources but want to keep your marketing management in-house? Our employer of record service can provide resources to you on a full-time basis or contract basis to execute on your behalf. See our Employer of record service for <u><a href="#eor_subtitle" target="_blank">more details</a></u>.</p>
+</div>
+    </Fragment>
+  </Content>
+
+
+
+ <div class="cookie-banner">
+  <p>Our website uses cookies to improve your experience. By continuing to use our site, you accept our use of cookies.</p>
+  <button class="cookie-banner__button">Accept</button>
+</div>
+
+</Layout>

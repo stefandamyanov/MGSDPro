@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from '~/components/widgets/Hero.astro';
+const meta = {
+  title: "Free Guide",
+  description:"Sign up to get our free EOR guide delivered by email.", 
+};
+---
+
+<Layout {meta}>
+  <!-- <Fragment slot="announcement"></Fragment>
+ <Fragment slot="header">
+    <Header
+      links={[]}
+      actions={[
+        {
+          type: "ghost",
+          text: 'Login',
+          href: '#',
+        },
+        {
+          type: "primary",
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+    /> 
+  </Fragment>-->
+
+<!-- Hero Widget ******************* -->
+
+  <Hero
+    
+  image={{ src: import('~/assets/images/guide6.png'), alt: 'get our free EOR guide' }}
+
+
+   >
+
+   <Fragment slot="title">
+      <span style="color:#3d9be9">Get Your Free Guide<!--</span><span class="hidden lg:inline" style="color:#3d9be9;"> Contact</span>
+      <span style="color:#3d9be9;"> MGSD Pro</span>-->
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">Fill out your details below and we'll email you your free guide </span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Fill out your details below and we'll email you your free guide</span> 
+
+    </Fragment>
+  </Hero>
+
+<div style="margin-top:-0%;margin-bottom:-0%;">
+<iframe src="https://share-eu1.hsforms.com/1noKzgFwoQh-JGSFsz49JHwg1x9k" title="Contact MGSD Pro" width="100%" height="700" ></iframe>
+</div>
+
+
+ <div class="cookie-banner">
+  <p>Our website uses cookies to improve your experience. By continuing to use our site, you accept our use of cookies.</p>
+  <button class="cookie-banner__button">Accept</button>
+</div>
+
+</Layout>

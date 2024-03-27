@@ -1,0 +1,113 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from '~/components/widgets/Hero.astro';
+const meta = {
+  title: "Contact",
+  description: "Get in touch with the team at MGSD Pro and find out more about the solutions we can provide.",
+};
+---
+
+<Layout {meta}>
+  <!--<Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[]}
+      actions={[
+        {
+          type: "ghost",
+          text: 'Login',
+          href: '#',
+        },
+        {
+          type: "primary",
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+    /> 
+  </Fragment> -->
+
+<!-- Hero Widget ******************* -->
+
+  <Hero
+    
+  image={{ src: import('~/assets/images/contact12.png'), alt: 'our friendly MGSD Pro customer service team' }}
+
+
+   >
+
+   <Fragment slot="title">
+      <span style="color:#3d9be9">Contact Us<!--</span><span class="hidden lg:inline" style="color:#3d9be9;"> Contact</span>
+      <span style="color:#3d9be9;"> MGSD Pro</span>-->
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">Get in touch with the team at MGSD Pro and find out more about the solutions we can provide.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Get in touch with the team at MGSD Pro and find out more about the solutions we can provide.</span> Want to find out more about Employer of Record?
+
+Need to outsource some of your processes?
+
+Looking for full-service Marketing?
+
+New website to build?
+
+Discuss Partnering with us?
+    </Fragment>
+  </Hero>
+
+<div style="margin-top:-0%">
+<iframe src="https://share-eu1.hsforms.com/1hJb9snccR5aK3a_w-1ZgPAg1x9k" title="Contact MGSD Pro" width="100%" height="900" ></iframe>
+</div>
+
+<!-- Hero2 Widget ******************* -->
+
+  <Hero
+    callToAction={{ text: 'Download Our Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Our services', href: '/landing/services' }}
+  >
+    <Fragment slot="title">
+      Get in Touch <!--<span class="hidden lg:inline">create your website <br />with</span>-->
+     <!-- <span class="text-accent dark:text-white highlight"> Astro 2.0</span>--> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <!--<span class="font-semibold">AstroWind</span>--> 
+        <a href="https://www.linkedin.com/company/mgsd-pro/" target="_blank">LinkedIn</a> | <a href="https://www.facebook.com/mgsdpro" target="_blank">Facebook</a> | <a href="https://twitter.com/MGSDPro" target="_blank">Twitter</a>
+        </br>
+         <a href="tel:+359 (0) 888 443 993" target="_blank">+359 (0) 888 443 993</a> 
+        </br>
+         <a href="tel:+44 (0) 779 5072078" target="_blank"> +44 (0) 779 5072078</a>  
+        </br>
+         <a href="mailto:info@mgsdpro.com" target="_blank">info@mgsdpro.com</a> 
+
+
+         </span>
+        <span class="block mb-1 sm:hidden font-bold text-blue-600"<a href="https://www.linkedin.com/company/mgsd-pro/" target="_blank">LinkedIn</a> | <a href="https://www.facebook.com/mgsdpro" target="_blank">Facebook</a> | <a href="https://twitter.com/MGSDPro" target="_blank">Twitter</a>
+        </br>
+         <a href="tel:+359 (0) 888 443 993" target="_blank">+359 (0) 888 443 993</a> 
+        </br>
+         <a href="tel:+44 (0) 779 5072078" target="_blank"> +44 (0) 779 5072078</a>  
+        </br>
+         <a href="mailto:info@mgsdpro.com" target="_blank">info@mgsdpro.com</a>  </span>  
+      
+      
+    </Fragment>
+
+   <!-- <Fragment slot="image">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dsTXcSeAZq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%"></iframe>
+    </Fragment> -->
+  </Hero>
+
+
+<div class="cookie-banner">
+  <p>Our website uses cookies to improve your experience. By continuing to use our site, you accept our use of cookies.</p>
+  <button class="cookie-banner__button">Accept</button>
+</div>
+
+</Layout>

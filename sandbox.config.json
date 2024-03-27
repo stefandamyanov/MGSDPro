@@ -1,0 +1,45 @@
+{
+  "infiniteLoopProtection": true,
+  "hardReloadOnChange": false,
+  "view": "browser",
+  "template": "node",
+  "container": {
+    "port": 3000,
+    "startScript": "start",
+    "node": "16"
+  }
+}
+
+{
+  "sections": {
+    "carousel_section": {
+      "settings": [
+        {
+          "id": "slides",
+          "type": "array",
+          "label": "Slides",
+          "default": [],
+          "min": 1,
+          "max": 10,
+          "settings": [
+            {
+              "id": "image",
+              "type": "image_picker",
+              "label": "Image"
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "label": "Title"
+            },
+            {
+              "id": "description",
+              "type": "text",
+              "label": "Description"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

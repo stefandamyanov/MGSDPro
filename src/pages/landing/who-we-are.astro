@@ -1,0 +1,391 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import { headerData } from '~/data';
+
+const meta = {
+  title: 'WHO WE ARE',
+  description: 'Our expertise is to recruit highly skilled talent and deliver world class marketing solutions.',
+};
+---
+
+<Layout {meta}>
+  <!--<Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          type: "ghost",
+          text: 'Login',
+          href: '#',
+        },
+        {
+          type: "primary",
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>-->
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Get Our Free Guide', href: '/landing/free-guide', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#about_us' }}
+    image={{ src: import('~/assets/images/consultings.png'), alt: 'MGSDPro experts providing consutancy to clients' }}
+  >
+    <Fragment slot="title">
+      Who We Are
+      <!-- <span class="text-accent dark:text-white highlight"> Astro 2.0</span>  + Tailwind CSS-->
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Formed in 2018, <span class="font-semibold">MGSD Pro Bulgaria</span> specialise in aiding small and medium sized businesses.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Formed in 2018, MGSD Pro Bulgaria specialise in aiding small and medium sized businesses.</span> Our expertise is to recruit highly skilled talent and deliver world class marketing solutions. We Manage, Guide, Supply & Deliver solutions to support SME’s in driving operational costs down, delivering business efficiencies and providing exceptional customer experiences.
+    </Fragment>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Our Experience',
+        description:
+          'With over 30 years’ background in managing every perspective of a business and experience based across the globe.',
+      },
+      {
+        title: 'Our Services',
+        description:
+          'We provide Employee of Record Services, Outsourced Solutions and Marketing Services. From launching a team in Europe, extending your operation, or solving your recruitment skills challenge, we can tailor a solution to deliver your requirements.',
+      },
+    //  {
+    //    title: 'Nulla omittam sadipscing mel ne',
+    //    description:
+    //      'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/meeting.png'),
+      alt: 'MGSDPro client meeting',
+    }}
+  >
+    <Fragment slot="content" >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" id="about_us" style="margin-top:-10%">About us</h3>
+     MGSD Pro Bulgaria is managed and owned by professionals with a management experience from leading AdTech, Marketing, IT & Financial companies. 
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+<div style="margin-top:-10%;">
+  <Content
+    items={[
+      {
+        title: 'Flexibility',
+        description:
+          'A proven safe pair of hands guiding you though the journey. We deliver Talent solutions that make sense and flexible for your needs.',
+      },
+      {
+        title: 'Our Mission',
+        description:
+          'Your team is an extension of your business without all the hassles that comes with building and maintaining these teams.Deliver business growth by providing expertise services and resource through collaboration, integrity, innovation, fairness, and honesty.',
+      },
+    // {
+    //    title: 'Nulla omittam sadipscing mel ne',
+    //    description:
+    //      'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    ]}
+    image={{
+      src: import('~/assets/images/caos.jpg'),
+      alt: 'MGSDPro mission is to put chaos in order',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-5%;">Talent solutions</h3>
+      We provide exceptional talent to deliver business results having gone through our robust selection process that ensures you skilled expertise to solve your business challenges and deliver results. 
+    </Fragment>
+  </Content>
+ </div> 
+
+
+  <FAQs
+    title="What Our Customers Say"
+    highlight="Testimonials"
+    items={[
+      [
+        {
+          question: 'CEO - US Digital Marketing Agency',
+          answer:
+            'For us it 3 things we look for in a partner. Language coverage, quality & responsiveness. MGSD Pro deliver and I would recommend them every time. ',
+        },
+        {
+          question: 'VP Publisher & Technology Development - US Consulting Company',
+          answer:
+            "It is so refreshing to be able to speak to a company that provides a solution to our challenges. I'm so used to trying to solve problems for other companies that dealing with MGSD Pro is an absolute pleasure. The key for us is speed and flexibility and MGSD Pro deliver on this time and time again. ", 
+        },
+       // {
+       //   question: "What's something that you don't understand?",
+       //   answer:
+       //     "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big //Bear.",
+       // },
+      ],
+      [
+        {
+          question: "Head of Paid Search - UK Media Agency",
+          answer:
+            "It is a pleasure working with MGSD Pro. The speed, commitment and results achieved outperformed our expectations. Their transparency, communication and professionalism support the integration into our local team.",
+        },
+        {
+          question: 'Chief Commercial Officer - UK Retail Company',
+          answer:
+            "Nearshoring for us felt like a big change to our business model. We are glad we chose MGSD Pro who have supported us on every step of the journey and completed a seamless transition process. We have reduced operational costs by over 40% and providing our customers with an enhanced service.",
+        },
+       // {
+       //   question: 'If you could only ask one question to each person you meet, what would that question be?',
+       //   answer:
+       //     "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to //know. About four years. I got tired of hearing how young I looked.",
+       // },
+      ],
+    ]}
+  />
+
+
+
+  <!-- Steps2 Widget ****************** -->
+
+<!--<Steps2
+    title="Sed ac magna sit amet risus tristique interdum, at vel velit in hac habitasse platea dictumst."
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus."
+    callToAction={{
+      text: 'Get Our Free Guide',
+      href: '/landing/free-guide',
+      icon: 'tabler:download',
+    }}
+    items={[
+      {
+        title: 'Responsive Elements',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      },
+      {
+        title: 'Flexible Team',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      },
+      {
+        title: 'Ecologic Software',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+      },
+    ]}
+  /> -->
+  
+   <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Get Our Free Guide',
+      href: '/landing/free-guide',
+      icon: 'tabler:download',
+    }}
+  >
+    <Fragment slot="title">
+      Download Our Free <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Guide</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      All you need to know about outsourcing labor resources from Bulgaria.  
+    </Fragment>
+  </CallToAction>
+
+  <!-- Content Widget **************** -->
+
+<Content 
+    isReversed
+    items={[
+      {
+        title: 'Part of the EU',
+        //description:
+        //  'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+      },
+      {
+        title: '4th Fastest European service in mobile high-speed Internet',
+        //description:
+        //  'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+      },
+      {
+        title: 'Over 30% of working age people speak English',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: '41% of adults have at least one university degree',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: '6.9 million population',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: '10% corporate tax',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'Over 10% of Bulgarian exports is High-Tech',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'Great talent at completive rates',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+
+    ]}
+    image={{
+      src: import('~/assets/images/bg1.jpg'),
+      alt: 'a beautiful landscape from the historical town Veliko Tarnovo in Bulgaria, shot from the Tsarevets fortress',
+    }} 
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-13%;">Bulgarian Facts</h3>
+      <!-- Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
+      tacimates.-->
+    </Fragment>
+  </Content>
+
+   <!-- Content Widget **************** -->
+<div style="margin-top:-5%;">
+<Content 
+   
+    items={[
+      {
+        title: 'Bulgaria is one of the oldest European countries established in 681 AD',
+        //description:
+        //  'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+      },
+      {
+        title: 'Since then, Bulgaria is the only one that hasn’t changed its name.',
+        //description:
+        //  'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+      },
+      {
+        title: '1/3 of the country is covered in forest',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'Birthplace of Cyrillic script',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'Never been colonized',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'Bulgaria ranks third in Europe for the number of its valuable archaeological monuments after Italy and Greece',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'The Bulgarian army has never lost a single flag in battle',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/bg2.jpg'),
+      alt: 'an image from a typical Bulgarian city',
+    }} 
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-25%;">12 Interesting Facts about Bulgaria</h3>
+      <!-- Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
+      tacimates.-->
+    </Fragment>
+  </Content>
+  </div>
+  <!-- Content Widget **************** -->
+<div style="margin-top:-12%">
+<Content 
+    isReversed
+    items={[
+      {
+        title: 'Bulgaria is fourth in the world in per capita university education',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+       {
+        title: 'Bulgaria produced as much as 85% of the world’s rose oil',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'The Lactobacillus bulgaricus, which gives the unique taste of yoghurt can be found only in Bulgaria',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+       {
+        title: 'World’s first digital wristwatch was developed by the Bulgarian, Peter Petroff',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+      {
+        title: 'The first electronic computer was invented by John Vincent Atanasoff who has a Bulgarian origin',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+     // {
+     //   title: '10% corporate tax',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    //  {
+    //    title: 'Over 10% of Bulgarian exports is High-Tech',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+    //  },
+    //  {
+    //    title: 'Great talent at completive rates',
+      //  description:
+      //    'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+     // },
+
+    ]}
+    image={{
+      src: import('~/assets/images/bg3.jpg'),
+      alt: 'Bulgarian rose oil production',
+    }} 
+ >
+ </div>
+    <Fragment slot="content">
+       <!--<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="margin-top:-13%;">Bulgarian Facts</h3>
+     Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
+      tacimates.-->
+    </Fragment>
+  </Content>
+</div>
+
+  <div class="cookie-banner">
+  <p>Our website uses cookies to improve your experience. By continuing to use our site, you accept our use of cookies.</p>
+  <button class="cookie-banner__button">Accept</button>
+</div>
+
+</Layout>
